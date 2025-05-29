@@ -1,8 +1,8 @@
-## 🚀 Deploy a NEAR Endorsments Validator Node (Mainnet)
+## 🚀 Deploy a NEAR Endorsements Validator Node (Mainnet)
 
 > ⚠️ **Important**: To participate as a validator, you must have a NEAR account with **at least 4 NEAR** available. You will also need access to that account in order to sign transactions and generate your validator key. If you're creating a new account, make sure it is funded and you know its full address (account ID) before starting.
 
-> This guide walks you through installing and running a NEAR endorsments validator node from scratch. No advanced knowledge is required, just basic familiarity with Linux CLI.
+> This guide walks you through installing and running a NEAR endorsements validator node from scratch. No advanced knowledge is required, just basic familiarity with Linux CLI.
 
 ---
 
