@@ -145,7 +145,7 @@ scp validator_key.json username@your.server:/home/username/.near/
 
 ---
 
-### ⚡ Step 8 – Sync via Snapshot
+### ⚡ Step 8 – Sync via Epoch Sync
 
 ```bash
 # Get list of boot nodes (filtering duplicate IPs)
@@ -157,7 +157,7 @@ BOOT_NODES=$(curl -s -X POST https://rpc.mainnet.near.org -H "Content-Type: appl
 jq --arg nodes "$BOOT_NODES" '.network.boot_nodes = $nodes' ~/.near/config.json > ~/.near/config.json.tmp && mv ~/.near/config.json.tmp ~/.near/config.json
 ```
 
-> 🚀 Optional: use snapshot for faster sync.
+> Optional: use snapshot sync. May use more storage space.
 
 ```bash
 cd ~/.near
