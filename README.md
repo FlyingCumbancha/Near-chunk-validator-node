@@ -1,6 +1,6 @@
 ## 🚀 Deploy a NEAR Endorsements Validator Node (Mainnet)
 
-> ⚠️ **Important**: To participate as a validator, you must have a NEAR account with **at least 4 NEAR** available. You will also need access to that account in order to sign transactions and generate your validator key. If you're creating a new account, make sure it is funded and you know its full address (account ID) before starting.
+> ⚠️ **Important**: To participate as a validator, you must have a NEAR account with **at least 5 NEAR** available. You will also need access to that account in order to sign transactions and generate your validator key. If you're creating a new account, make sure it is funded and you know its full address (account ID) before starting.
 
 > This guide walks you through installing and running a NEAR endorsements validator node from scratch. No advanced knowledge is required, just basic familiarity with Linux CLI.
 
@@ -12,7 +12,7 @@
 | --------- | ----------------------- |
 | CPU       | 4 vCPUs (Intel/AMD)     |
 | RAM       | 8 GB                    |
-| Disk      | 160 GB SSD              |
+| Disk      | 80 GB SSD              |
 | OS        | Debian 12 (recommended) |
 
 > 💡 **Note**: Ubuntu 22.04 LTS also works fine.
@@ -112,7 +112,7 @@ near login
 >
 > 💡 **If you're using a server without a GUI**, copy the URL and open it in a browser on another device. After signing the transaction, the CLI might return an error because it cannot open the local redirect (`127.0.0.1`). This is expected. Simply provide your NEAR account ID when prompted and confirm that the message `Logged in successfully` appears.
 >
-> ⚠️ Make sure the account you're logging in with is already funded with at least 4 NEAR, and that you know the full account ID before proceeding. If you're creating a new account during the login process, it may not be properly saved or funded, leading to errors.
+> ⚠️ Make sure the account you're logging in with is already funded with at least 5 NEAR, and that you know the full account ID before proceeding. If you're creating a new account during the login process, it may not be properly saved or funded, leading to errors.
 
 Once logged in, your credentials will be saved locally in:
 
@@ -241,7 +241,7 @@ sudo sysctl --system
 To activate your validator, you must deposit and stake NEAR from your validator account:
 
 ```bash
-near call <your-validator-account> deposit_and_stake --accountId <signer-account> --amount "30"
+near call <your-validator-account> deposit_and_stake --accountId <signer-account> --amount "999"
 ```
 
 * Replace `<your-validator-account>` with the account you want to stake for. This is the account whose validator key is in `validator_key.json`.
@@ -250,7 +250,7 @@ near call <your-validator-account> deposit_and_stake --accountId <signer-account
 > 📅 **Example:**
 >
 > ```bash
-> near call validator-account.near deposit_and_stake --accountId validator-account.near --amount "30"
+> near call validator-account.near deposit_and_stake --accountId validator-account.near --amount "999"
 > ```
 
 * `--amount` is the amount of NEAR tokens to stake (minimum is 30 NEAR to enter the validator set).
