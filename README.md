@@ -128,6 +128,16 @@ mv ~/.near-credentials/mainnet/<your-validator-account>.json ~/.near/validator_k
 
 > ⚠️ This file contains your private key. Keep it secure and never share it.
 
+Make sure that the `~/.near/validator_key.json` has the following format:
+
+```js
+{
+   "account_id": "my-near-account.near",
+   "public_key":"ed25519:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "private_key":"ed25519:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}
+```
+
 ---
 
 ### 🕝 Step 7 – Upload Existing Keys (if needed)
